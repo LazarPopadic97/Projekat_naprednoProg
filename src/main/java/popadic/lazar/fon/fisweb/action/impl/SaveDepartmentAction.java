@@ -13,11 +13,17 @@ import popadic.lazar.fon.fisweb.constants.PageConstants;
 import popadic.lazar.fon.fisweb.model.Department;
 
 /**
- *
+ * Akcija za cuvanje nove katedre u sistemu, nasledjuje aspstraktnu klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class SaveDepartmentAction extends AbstractAction{
+    /**
+     * Vrsi cuvanje nove katedre i vraca prikaz stranice za dodavanje katedre
+     * @param request http zahtev
+     * @return prikaz stranice za dodavanje katedre
+     */
     @Override
     public String execute(HttpServletRequest request) {
         long max = 0;
