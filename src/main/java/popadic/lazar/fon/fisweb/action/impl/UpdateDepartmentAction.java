@@ -13,15 +13,24 @@ import popadic.lazar.fon.fisweb.constants.PageConstants;
 import popadic.lazar.fon.fisweb.model.Department;
 
 /**
- *
+ * Akcija za prihvatanje izmena izvrsenih nad katedrom, nasledjuje apstraktnu klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class UpdateDepartmentAction extends AbstractAction {
 
+    /**
+     * Neparametrizovani konstruktor
+     */
     public UpdateDepartmentAction() {
     }
 
+    /**
+     * Omogocuva izmenu nad katedrom i vraca stranicu u zavisnosti da li su izmene uspele
+     * @param request http zahtev
+     * @return vraca izgled stranice za izmenu katedre ili stranicu za prikaz svih katedri
+     */
     @Override
     public String execute(HttpServletRequest request) {
         long id = Long.valueOf(request.getPathInfo().split("/")[3]);
