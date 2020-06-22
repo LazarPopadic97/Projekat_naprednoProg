@@ -11,12 +11,18 @@ import popadic.lazar.fon.fisweb.action.AbstractAction;
 import popadic.lazar.fon.fisweb.constants.PageConstants;
 
 /**
- *
+ * Akcija za odjavljivanje sa sistema, nasledjuje klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class LogoutAction extends AbstractAction{
 
+   /**
+    * Vraca izgled stranice za logovanje nakon odjavljivanja sa sistema
+    * @param request http zahtev
+    * @return izgled stranice za logovanje kao string
+    */
    @Override
     public String execute(HttpServletRequest request) {
         request.getSession().invalidate();
