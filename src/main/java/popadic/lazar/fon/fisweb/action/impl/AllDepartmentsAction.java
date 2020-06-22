@@ -11,11 +11,17 @@ import popadic.lazar.fon.fisweb.action.AbstractAction;
 import popadic.lazar.fon.fisweb.constants.PageConstants;
 
 /**
- *
+ * Akcija za pregled svih katedri, nasledjuje apstraktnu klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class AllDepartmentsAction extends AbstractAction{
+    /**
+     * Vraca izgled stranice za prikaz svih katedri
+     * @param request http zahtev
+     * @return izgled stranice za prikaz svih katedri kao string
+     */
     @Override
     public String execute(HttpServletRequest request) {
         //uzmi sve korisnike sistema i ubaci u request
