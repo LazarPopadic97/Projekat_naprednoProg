@@ -13,15 +13,24 @@ import popadic.lazar.fon.fisweb.constants.PageConstants;
 import popadic.lazar.fon.fisweb.model.Department;
 
 /**
- *
+ * Akcija za brisanje katedre, nasledjuje apstraktnu klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class DeleteDepartmentAction extends AbstractAction {
 
+    /**
+     * Neparametrizovani konstruktor 
+     */
     public DeleteDepartmentAction() {
     }
 
+    /**
+     * Brise odredjenu katedru i nakon toga svakako vraca stranicu za prikaz svih katedri
+     * @param request http zahtev
+     * @return izgled stranice za prikaz svih katedri kao string
+     */
     @Override
     public String execute(HttpServletRequest request) {
         long id = Long.valueOf(request.getPathInfo().split("/")[3]);
