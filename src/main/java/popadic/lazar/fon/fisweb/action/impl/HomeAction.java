@@ -11,14 +11,20 @@ import popadic.lazar.fon.fisweb.action.AbstractAction;
 import popadic.lazar.fon.fisweb.constants.PageConstants;
 
 /**
- *
+ * Akcija za prikaz pocetne strane, nasledjuje apstraktnu klasu AbstractAction
+ * 
  * @author Lazar Popadic
  */
 @Component
 public class HomeAction extends AbstractAction{
 
+    /**
+     * Vraca izgled za pocetnu stranu
+     * @param request http zahtev
+     * @return izgled za pocetnu stranu kao string
+     */
     @Override
-    public String execute(HttpServletRequest arg0) {
+    public String execute(HttpServletRequest request) {
         return PageConstants.VIEW_HOME;
     }
     
