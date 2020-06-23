@@ -41,7 +41,7 @@ public class MyApplicationContextListener implements ServletContextListener {
     //liste da se povlace iz json fajla 
     //testovi za akcije(osnovne scenarije) i java doc
     @Override
-    
+
     public void contextInitialized(ServletContextEvent sce) {
         System.out.println("======================================================");
         System.out.println("=========        contextInitialized  =================");
@@ -58,14 +58,14 @@ public class MyApplicationContextListener implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
     }
-    
-    private List<User> createUsers(){
-        List<User>listaKorisnika=new ArrayList<>();
-        try(FileReader in = new FileReader(PageConstants.PAGE_JSON)){
-            Gson gson=new Gson();
-            User[] korisnici=gson.fromJson(in,User[].class);
-            listaKorisnika=Arrays.asList(korisnici);
-        }catch(IOException e){
+
+    private List<User> createUsers() {
+        List<User> listaKorisnika = new ArrayList<>();
+        try ( FileReader in = new FileReader(PageConstants.PAGE_JSON_USERS)) {
+            Gson gson = new Gson();
+            User[] korisnici = gson.fromJson(in, User[].class);
+            listaKorisnika = Arrays.asList(korisnici);
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return listaKorisnika;
@@ -77,12 +77,22 @@ public class MyApplicationContextListener implements ServletContextListener {
 //            }
 //        };
     }
-    private List<Department> createDepartments(){
-        return new ArrayList<Department>(){
-            {
-                add(new Department(1l, "mmk", "Laboratorija za multimedijalne komunikacije"));
-                add(new Department(2l, "silab", "Laboratorija za softversko inzenjerstvo"));
-            }
-        };
+
+    private List<Department> createDepartments() {
+        List<Department> listaKatedri = new ArrayList<>();
+        try ( FileReader in = new FileReader(PageConstants.PAGE_JSON_DEPARTMENTS)) {
+            Gson gson = new Gson();
+            Department[] katedre = gson.fromJson(in, Department[].class);
+            listaKatedri = Arrays.asList(katedre);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listaKatedri;
+//        return new ArrayList<Department>(){
+//            {
+//                add(new Department(1l, "mmk", "Laboratorija za multimedijalne komunikacije"));
+//                add(new Department(2l, "silab", "Laboratorija za softversko inzenjerstvo"));
+//            }
+//        };
     }
 }

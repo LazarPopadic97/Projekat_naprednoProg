@@ -26,7 +26,8 @@ public interface PageConstants {
     public static final String PAGE_ADD_DEPARTMENT = "/WEB-INF/pages/department/add.jsp";
     public static final String PAGE_EDIT_DEPARTMENT = "/WEB-INF/pages/department/edit.jsp";
     public static final String PAGE_PROFILE = "/WEB-INF/pages/user/myprofile.jsp";
-    public static final String PAGE_JSON="E:\\Users\\Lazar Popadic\\Lazar Popadic\\Faks\\Napredne java tehnologije\\njtdomaci-master\\src\\main\\resources\\json_files\\users.json";
-
+    public static final String PAGE_JSON_USERS="E:\\Users\\Lazar Popadic\\Lazar Popadic\\Faks\\Napredne java tehnologije\\njtdomaci-master\\src\\main\\resources\\json_files\\users.json";
+    public static final String PAGE_JSON_DEPARTMENTS="E:\\Users\\Lazar Popadic\\Lazar Popadic\\Faks\\Napredne java tehnologije\\njtdomaci-master\\src\\main\\resources\\json_files\\departments.json";
+    
     public static final String PAGE_DEFAULT_ERROR = "/WEB-INF/pages/error/defaultErrorPage.jsp";
 }

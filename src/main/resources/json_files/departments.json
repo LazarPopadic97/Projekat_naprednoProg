@@ -1,0 +1,21 @@
+[{
+        "id": 1,
+        "shortname": "mmk",
+        "name": "Laboratorija za multimedijalne komunikacije"
+                
+    },
+    
+    {
+        "id": 2,
+        "shortname": "silab",
+        "name": "Laboratorija za softversko inzenjerstvo"
+                
+    },
+    
+    {
+        "id": 3,
+        "shortname": "is",
+        "name": "Katedra za informacione sisteme"
+                
+    }
+]
