@@ -62,8 +62,12 @@ public class User implements Serializable{
      /**
      * Postavlja novo ime korisnika
      * @param firstname novo ime koje treba postaviti
+     *  @throws java.lang.RuntimeException ako je firstname null ili prazan string
      */
     public void setFirstname(String firstname) {
+        if(firstname==null || firstname.equals("")){
+            throw new RuntimeException("Ime ne sme biti null ili prazan string");
+        }
         this.firstname = firstname;
     }
  /**
@@ -77,8 +81,12 @@ public class User implements Serializable{
      /**
      * Postavlja novo prezime korisnika
      * @param lastname novo prezime koje treba postaviti
+     *  @throws java.lang.RuntimeException ako je prezime null ili prazan string
      */
     public void setLastname(String lastname) {
+        if(lastname==null || lastname.equals("")){
+            throw new RuntimeException("Prezime ne sme biti null ili prazan string");
+        }
         this.lastname = lastname;
     }
 
@@ -93,8 +101,11 @@ public class User implements Serializable{
      /**
      * Postavlja novi email korisnika
      * @param email novi email koji treba postaviti
+     *  @throws java.lang.RuntimeException ako je email null,prazan string ili ne sadrzi @
      */
     public void setEmail(String email) {
+        if(email==null || email.equals("")|| !email.contains("@"))
+            throw new RuntimeException("Email ne sme biti null, prazan string i mora sadrzati @");
         this.email = email;
     }
 
@@ -108,8 +119,12 @@ public class User implements Serializable{
     /**
      * Postavlja novu sifru korisnika
      * @param password nova sifra koju treba postaviti
+     *  @throws java.lang.RuntimeException ako je sifra null, prazan string i kraca je od 6 karaktera 
      */
     public void setPassword(String password) {
+        if(password==null || password.equals("") || password.length()<6){
+            throw new RuntimeException("Sifra ne sme biti null, prazan string ili kraca od 6 karaktera");
+        }
         this.password = password;
     }
 

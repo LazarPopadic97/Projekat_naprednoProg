@@ -2,20 +2,20 @@
     {
         "firstname": "Lazar",
         "lastname": "Popadic",
-        "email": "laza",
-        "password": "123"
+        "email": "lazar@gmail",
+        "password": "123456"
     },
     {    
         "firstname": "Petar",
         "lastname": "Peric",
-        "email": "pera",
-        "password": "pera"
+        "email": "pera@yahoo",
+        "password": "pera123"
     },
     {
         "firstname": "Mika",
         "lastname": "Mikic",
-        "email": "mika",
-        "password": "mika"
+        "email": "mika@gmail",
+        "password": "mika123"
     }
 
 ]

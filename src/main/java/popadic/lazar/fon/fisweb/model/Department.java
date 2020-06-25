@@ -62,9 +62,13 @@ public class Department {
      /**
      * Postavlja novi id katedre
      * @param id novi id koji treba postaviti
+     * @throws java.lang.RuntimeException ako je id 0 ili negativan broj
      */
 
     public void setId(long id) {
+        if(id<1){
+            throw new RuntimeException("Id ne sme biti 0 ili negativan broj");
+        }
         this.id = id;
     }
 
@@ -79,8 +83,12 @@ public class Department {
     /**
      * Postavlja novi kratki naziv katedre
      * @param shortname novi kratki naziv koji treba postaviti
+     * @throws java.lang.RuntimeException ako je shortname null ili prazan string
      */
     public void setShortname(String shortname) {
+        if(shortname==null || shortname.equals("")){
+            throw new RuntimeException("Skraceni naziv ne sme biti null ili prazan string");
+        }
         this.shortname = shortname;
     }
 
@@ -95,8 +103,12 @@ public class Department {
     /**
      * Postavlja novi naziv katedre
      * @param name novi naziv koji treba postaviti
+     * @throws java.lang.RuntimeException ako je name null ili prazan string
      */
     public void setName(String name) {
+         if(name==null || name.equals("")){
+            throw new RuntimeException("Naziv ne sme biti null ili prazan string");
+        }
         this.name = name;
     }
 
